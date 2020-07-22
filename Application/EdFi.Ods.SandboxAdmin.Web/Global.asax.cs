@@ -59,7 +59,6 @@ namespace EdFi.Ods.SandboxAdmin.Web
             AreaRegistration.RegisterAllAreas();
 
             GlobalConfiguration.Configure(WebApiConfig.Register);
-            FilterConfig.RegisterHttpFilters(GlobalConfiguration.Configuration.Filters);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);

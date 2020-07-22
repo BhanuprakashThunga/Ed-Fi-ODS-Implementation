@@ -2,7 +2,7 @@
 // Licensed to the Ed-Fi Alliance under one or more agreements.
 // The Ed-Fi Alliance licenses this file to you under the Apache License, Version 2.0.
 // See the LICENSE and NOTICES files in the project root for more information.
-
+ 
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -102,13 +102,7 @@ namespace EdFi.Ods.Api.IntegrationTestHarness
                 {
                     Email = "test@ed-fi.org",
                     VendorName = "Test Admin",
-                    Applications = new List<Application> {applicaton},
-                    NamespacePrefixes = new List<string>
-                    {
-                        "uri://ed-fi.org",
-                        "uri://gbisd.edu",
-                        "uri://tpdm.ed-fi.org"
-                    }
+                    Applications = new List<Application> {applicaton}
                 };
 
                 return new List<Vendor> {vendor};
@@ -133,7 +127,7 @@ namespace EdFi.Ods.Api.IntegrationTestHarness
                                        {
                                            FullName = vendor.VendorName,
                                            Email = vendor.Email,
-                                           Vendor = clientAppRepo.CreateOrGetVendor(vendor.Email, vendor.VendorName, vendor.NamespacePrefixes)
+                                           Vendor = clientAppRepo.CreateOrGetVendor(vendor.Email, vendor.VendorName)
                                        });
 
                         foreach (var app in vendor.Applications)
